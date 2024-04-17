@@ -1,47 +1,10 @@
-# MaCA
-![](https://img.shields.io/badge/language-python-green.svg)
-![](https://img.shields.io/badge/platform-windows-green.svg)
-![](https://img.shields.io/badge/platform-linux-green.svg)
-![](https://img.shields.io/badge/platform-mac-green.svg)
-![](https://img.shields.io/badge/stability-experimental-green.svg)
+# Multi-Dimensional-Decision-Making-for-UAV-Air-Combat-Based-on-Hierarchical-Reinforcement-Learning
 
-Multi-agent Combat Arena (MaCA) is a heterogeneous multi-agent distributed decision and control technology reasearch platform produced by CETC-TFAI team. It focuses on the application of AI technologies e.g. reinforcement learning in multi-agent cooperation and confrontation
+This project is the partially open source code of EI paper Multi-Dimensional Decision-Making for UAV Air Combat Based on Hierarchical Reinforcement Learning using MaCA environment. You should focus on the file `train/pysac/SAC3.py`
 
-![](https://leonfg.github.io/maca/resource/maca.gif)
+For more details, please check our [paper](http://www.co-journal.com/CN/10.12382/bgxb.2022.0711) and MaCA environment document.
 
-## System Requirements
-- Linux 64-bit or Mac OS with Python 3.6
-- numpy 1.14.2 or later
-- pygame 1.9.3 or later
+You can watch the demo video [here](https://youtu.be/hYS2ae7KZPc).
 
-There is no limitation on agents' structure. You can write rule-based algorithms or use deep learning frameworks.
-## Quick Start Guide
-### Installation
-```bash
-pip install -U numpy pandas pygame
-git clone https://github.com/CETC-TFAI/MaCA.git
-cd MaCA
-export PYTHONPATH=$(pwd)/environment:$PYTHONPATH
-```
-### Run a combat between two agents
-[fight_mp.py](fight_mp.py) can execute two agents. It uses two instances of a fixed-rule agent to fight each other by default.
-```bash
-python fight_mp.py
-```
-You can specify agents and map by input arguments. In addition an agent should provide a call interface follows the MaCa platform specification.
-### Replay
-MaCa can record runtime log while playing and training. Use [replay.py](replay.py) to perform a replay.
-
-First, run [fight_mp.py](fight_mp.py) and enable log record function
-```bash
-python fight_mp.py --log
-```
-
-Then, run [replay.py](replay.py) to replay the log
-```bash
-python replay.py fix_rule_vs_fix_rule
-```
-The log structure of MaCA is a set of .macalog files, they will be saved in path "log/log-name/".
-When you run the [replay.py](replay.py), You must input a "log-name" as the parameter to specify which log you want to replay.
-
-For more information, see [tutorial](/doc/tutorial.md)
+## Disclaimer
+We love peace, and all of our offensive words such as air combat are limited to simulation games, so please do not misinterpret our work. We do not accept any accusation of militarization.
